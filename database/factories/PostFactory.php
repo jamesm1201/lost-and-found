@@ -16,7 +16,7 @@ class PostFactory extends Factory
     {
         return [
             'name'=>$this->faker->firstName(),
-            'email'=>$this->faker->email(),
+            'email'=>$this->faker->unique()->email(),
             //check numerify
             'contact_number'=>$this->faker->str_random(12)->numerify('############'),
             'date_found_lost'=>$this->faker->dateTimeBetween('+0 days', '+2 years'),

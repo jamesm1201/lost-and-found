@@ -17,7 +17,7 @@ class CommentFactory extends Factory
         return [
             'name'=>$this->faker->firstName(),
             'contact_number'=>$this->faker->str_random(12)->numerify('############'),
-            'email'=>$this->faker->email(),
+            'email'=>$this->faker->unique()->email(),
             'content'=>$this->faker->str_random(40),
         ];
     }
