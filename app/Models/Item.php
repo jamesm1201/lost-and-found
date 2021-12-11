@@ -9,7 +9,7 @@ class Item extends Model
 {
     use HasFactory;
 
-    public function animal(){
+    public function post(){
         return $this->belongsTo(Post::class);
     }
 }

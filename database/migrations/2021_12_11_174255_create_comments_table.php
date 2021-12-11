@@ -20,6 +20,10 @@ class CreateCommentsTable extends Migration
             $table->string('contact_number')->nullable();
             $table->string('email')->nullable();
             $table->string('content');
+            $table->bigInteger('post_id')->unsigned();
+
+            $table->foreign('post_id')->references('id')->on('posts')
+            -> onDelete('cascade')->onUpdate('cascade');
         });
     }
 
