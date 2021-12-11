@@ -15,10 +15,10 @@ class ItemFactory extends Factory
     public function definition()
     {
         return [
-            'name'=>$this->faker->randomElement(['phone', 'wallet', 'keys', 'bag', 'toy']);
-            'lost_found'=>$this->faker->randomElement(['lost', 'found']);
-            'handed_in'=>$this->faker->randomElement(['true', 'false']);
-            'valuable'=>$this->faker->randomElement(['true', 'false']);
+            'name'=>$this->faker->randomElement(['phone', 'wallet', 'keys', 'bag', 'toy']),
+            'lost_found'=>$this->faker->randomElement(['lost', 'found']),
+            'handed_in'=>$this->faker->randomElement(['true', 'false']),
+            'valuable'=>$this->faker->randomElement(['true', 'false']),
         ];
     }
 }

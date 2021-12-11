@@ -21,6 +21,6 @@ class ItemTableSeeder extends Seeder
         $b->valuable = true;
         $b->save();
 
-        $places = Item::factory()->count(10)->create();
+        $items = Item::factory()->count(10)->create();
     }
 }
