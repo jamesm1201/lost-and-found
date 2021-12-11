@@ -20,5 +20,7 @@ class CommentTableSeeder extends Seeder
         $a->email = "jwots@icloud.com";
         $a->content = "This is mine, call me!";
         $a->save();
+
+        $comments = Comment::factory()->count(10)->create();
     }
 }
