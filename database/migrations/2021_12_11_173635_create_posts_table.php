@@ -21,6 +21,7 @@ class CreatePostsTable extends Migration
             $table->string('contact_number')->nullable();
             $table->dateTime('date_found_lost')->nullable();
             $table->string('content');
+            //add item and place when relationships done
         });
     }
 
