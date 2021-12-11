@@ -20,5 +20,7 @@ class ItemTableSeeder extends Seeder
         $b->handed_in = false;
         $b->valuable = true;
         $b->save();
+
+        $places = Item::factory()->count(10)->create();
     }
 }
