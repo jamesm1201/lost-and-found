@@ -15,5 +15,8 @@ class Post extends Model
     public function comment(){
         return $this->hasMany(Comment::class);
     }
+    public function place(){
+        return $this->hasOne(Place::class);
+    }
 
 }
