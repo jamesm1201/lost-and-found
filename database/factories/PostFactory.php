@@ -18,9 +18,9 @@ class PostFactory extends Factory
             'name'=>$this->faker->firstName(),
             'email'=>$this->faker->unique()->email(),
             //check numerify
-            'contact_number'=>$this->faker->str_random(12)->numerify('############'),
+            'contact_number'=>$this->faker->numerify('############'),
             'date_found_lost'=>$this->faker->dateTimeBetween('+0 days', '+2 years'),
-            'content'=>$this->faker->str_random(40),
+            'content'=>$this->faker->lexify('hello ??????????????'),
         ];
     }
 }

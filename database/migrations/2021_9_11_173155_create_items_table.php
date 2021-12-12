@@ -18,8 +18,8 @@ class CreateItemsTable extends Migration
             $table->timestamps();
             $table->string('name');
             $table->string('lost_found');
-            $table->boolean('handed_in');
-            $table->boolean('valuable');
+            $table->boolean('handed_in')->nullable();
+            $table->boolean('valuable')->nullable();
             //$table->bigInteger('post_id')->unsigned();
 
             //don't know if the tables can reference eachother

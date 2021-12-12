@@ -16,7 +16,7 @@ class PlaceFactory extends Factory
     {
         return [
             'rough_area' =>$this->faker->randomElement(['beach', 'town centre', 'uplands', 'bay campus', 'singleton campus']),
-            'specific_area'=>$this->faker->Adress->streetName(),
+            //'specific_area'=>$this->faker->Address->streetName(),
         ];
     }
 }

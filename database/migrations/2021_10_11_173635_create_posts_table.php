@@ -19,7 +19,7 @@ class CreatePostsTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('contact_number')->nullable();
-            $table->dateTime('date_found_lost')->nullable();
+            $table->date('date_found_lost')->nullable();
             $table->string('content');
            // $table->bigInteger('item_id')->unsigned();
             //$table->bigInteger('place_id')->unsigned();

@@ -19,7 +19,15 @@ class PostTableSeeder extends Seeder
         $a->email = "jdoe@icloud.com";
         $a->contact_number = "07234743118";
         //check if dateTime needs ''
-        $a->date_found_lost = '11/11/2021';
+        $a->date_found_lost = '2021/11/10';
+        $a->content = "Found this (item.name) at (place.rougharea) contact me if its yours! ";
+
+        $a = new Post();
+        $a->name = "James";
+        $a->email = "jmorley@icloud.com";
+        $a->contact_number = "07677755518";
+        //check if dateTime needs ''
+        $a->date_found_lost = '2021/11/10';
         $a->content = "Found this (item.name) at (place.rougharea) contact me if its yours! ";
         //hard coded
        // $a->place_id = 1;
