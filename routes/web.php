@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/posts/{comment?}', function ($comment = null) {
+    //unlike welcome this is expecting data
+    return view('post', ['comment'=>$comment]);
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
