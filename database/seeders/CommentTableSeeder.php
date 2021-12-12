@@ -19,8 +19,10 @@ class CommentTableSeeder extends Seeder
         $a->contact_number = "0767544531";
         $a->email = "jwots@icloud.com";
         $a->content = "This is mine, call me!";
+        //hard coded post id
+        $a->post_id = 1;
         $a->save();
 
-        $comments = Comment::factory()->count(10)->create();
+        //$comments = Comment::factory()->count(10)->create();
     }
 }
