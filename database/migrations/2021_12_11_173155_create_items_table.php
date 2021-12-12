@@ -22,6 +22,8 @@ class CreateItemsTable extends Migration
             $table->boolean('valuable');
             $table->bigInteger('post_id')->unsigned();
 
+            //issue here with opening posts table
+            //maybe add to seeder 
             $table->foreign('post_id')->references('id')->on('posts')
             -> onDelete('cascade')->onUpdate('cascade');
         });
