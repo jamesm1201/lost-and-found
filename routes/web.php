@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,13 +18,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/posts/{comment?}', function ($comment = null) {
-    //unlike welcome this is expecting data
-    return view('post', ['comment'=>$comment]);
-});
+// Route::get('/post/{comment?}', function ($comment = null) {
+//     //unlike welcome this is expecting data
+//     return view('post', ['comment'=>$comment]);
+// });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+Route::get('/posts', [PostController::class, 'index']);
 
 require __DIR__.'/auth.php';
