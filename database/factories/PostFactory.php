@@ -21,6 +21,7 @@ class PostFactory extends Factory
             'contact_number'=>$this->faker->numerify('############'),
             'date_found_lost'=>$this->faker->dateTimeBetween('+0 days', '+2 years'),
             'content'=>$this->faker->lexify('hello ??????????????'),
+            'item_id'=>$this->faker->randomElement(['1', '2', '3']);
         ];
     }
 }

@@ -21,18 +21,19 @@ class PostTableSeeder extends Seeder
         //check if dateTime needs ''
         $a->date_found_lost = '2021/11/10';
         $a->content = "Found this (item.name) at (place.rougharea) contact me if its yours! ";
+        $a->item_id = 2;
 
-        $a = new Post();
-        $a->name = "James";
-        $a->email = "jmorley@icloud.com";
-        $a->contact_number = "07677755518";
+        $b = new Post();
+        $b->name = "James";
+        $b->email = "jmorley@icloud.com";
+        $b->contact_number = "07677755518";
         //check if dateTime needs ''
-        $a->date_found_lost = '2021/11/10';
-        $a->content = "Found this (item.name) at (place.rougharea) contact me if its yours! ";
+        $b->date_found_lost = '2021/11/10';
+        $b->content = "Found this (item.name) at (place.rougharea) contact me if its yours! ";
         //hard coded
        // $a->place_id = 1;
-       // $a->item_id = 1;
-        $a->save();
+        $b->item_id = 1;
+        $b->save();
 
         $posts = Post::factory()->count(10)->create();
     }

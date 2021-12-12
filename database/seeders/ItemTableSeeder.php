@@ -19,6 +19,7 @@ class ItemTableSeeder extends Seeder
         //check if true and false need to be in ''
         // $b->handed_in = "false";
         // $b->valuable = "true";
+        $b->post_id = 1;
         $b->save();
 
         $items = Item::factory()->count(10)->create();
