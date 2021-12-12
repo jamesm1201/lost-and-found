@@ -20,12 +20,11 @@ class CreateItemsTable extends Migration
             $table->string('lost_found');
             $table->boolean('handed_in');
             $table->boolean('valuable');
-            $table->bigInteger('post_id')->unsigned();
+            //$table->bigInteger('post_id')->unsigned();
 
-            //issue here with opening posts table
-            //maybe add to seeder 
-            $table->foreign('post_id')->references('id')->on('posts')
-            -> onDelete('cascade')->onUpdate('cascade');
+            //don't know if the tables can reference eachother
+            // $table->foreign('post_id')->references('id')->on('posts')
+            // -> onDelete('cascade')->onUpdate('cascade');
         });
     }
 
