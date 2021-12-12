@@ -9,6 +9,7 @@ class Post extends Model
 {
     use HasFactory;
 
+    //after swapping relations check models
     public function item(){
         return $this->hasOne(Item::class);
     }
