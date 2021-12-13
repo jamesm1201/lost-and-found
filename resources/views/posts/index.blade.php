@@ -8,7 +8,8 @@
     <p>Lost items in the local area</p>
     <ul>
         @foreach($posts as $post)
-            <li> {{$post->name}}</li>
+            <li> <a href="/posts/{{$post->id}}">{{$post->name}}</a></li>
+            <li> {{$post->content}}</li>
         @endforeach
     </ul>
 @endsection
