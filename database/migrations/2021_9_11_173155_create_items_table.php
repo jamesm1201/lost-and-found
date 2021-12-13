@@ -15,14 +15,13 @@ class CreateItemsTable extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('name');
             $table->string('lost_found');
             $table->boolean('handed_in')->nullable();
             $table->boolean('valuable')->nullable();
             $table->bigInteger('post_id')->unsigned();
+            $table->timestamps();
 
-            //don't know if the tables can reference eachother
             $table->foreign('post_id')->references('id')->on('posts')
              -> onDelete('cascade')->onUpdate('cascade');
         });

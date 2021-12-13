@@ -15,8 +15,13 @@ class ItemFactory extends Factory
     public function definition()
     {
         return [
+            
             'name'=>$this->faker->randomElement(['phone', 'wallet', 'keys', 'bag', 'toy']),
             'lost_found'=>$this->faker->randomElement(['lost', 'found']),
+            'post_id'=>1,
+            // 'post_id' => function(){
+            //     return factory(\App\Models\Post::class)->create()->id;
+            // },
             //'handed_in'=>$this->faker->randomElement(['true', 'false']),
             //'valuable'=>$this->faker->randomElement(['true', 'false']),
         ];

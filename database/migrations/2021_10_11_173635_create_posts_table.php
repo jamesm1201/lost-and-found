@@ -21,16 +21,22 @@ class CreatePostsTable extends Migration
             $table->string('contact_number')->nullable();
             $table->date('date_found_lost')->nullable();
             $table->string('content');
-            $table->bigInteger('item_id')->unsigned();
+           
             //$table->bigInteger('place_id')->unsigned();
             //add item and place when relationships done
             
             // $table->foreign('place_id')->references('id')->on('places')
             // ->onDelete('cascade')->onUpdate('cascade');
             
-            $table->foreign('item_id')->references('id')->on('items')
-             ->onDelete('cascade')->onUpdate('cascade');
+            // $table->foreign('item_id')->references('id')->on('items')
+            //  ->onDelete('cascade')->onUpdate('cascade');
         });
+        // Schema::table('posts', function(Blueprint $table){
+        //     $table->bigInteger('item_id')->unsigned();
+        //     $table->foreign('item_id')
+        //          ->references('id')
+        //          ->on('items');
+        // });
     }
 
     /**

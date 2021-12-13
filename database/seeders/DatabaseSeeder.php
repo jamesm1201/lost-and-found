@@ -20,8 +20,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             PlaceTableSeeder::class,
-            ItemTableSeeder::class,
             PostTableSeeder::class,
+            ItemTableSeeder::class,
             CommentTableSeeder::class,
         ]);
     }
