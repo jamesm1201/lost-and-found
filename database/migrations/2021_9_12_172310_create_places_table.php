@@ -18,7 +18,10 @@ class CreatePlacesTable extends Migration
             $table->timestamps();
             $table->string('rough_area');
             $table->string('specific_area')->nullable();
-            
+           // $table->bigInteger('post_id')->unsigned();
+
+        //     $table->foreign('post_id')->references('id')->on('posts')
+        //      ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

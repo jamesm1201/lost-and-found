@@ -19,6 +19,11 @@ class PlaceTableSeeder extends Seeder
         $a->specific_area = "war memorial";
         $a->save();
 
-        $places = Place::factory()->count(10)->create();
+        $b = new Place();
+        $b->rough_area = "Town centre";
+        $b->specific_area = "wind street";
+        $b->save();
+
+        //$places = Place::factory()->count(8)->create();
     }
 }

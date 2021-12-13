@@ -21,6 +21,7 @@ class PostTableSeeder extends Seeder
         //check if dateTime needs ''
         $a->date_found_lost = '2021/11/10';
         $a->content = "Found this (item.name) at (place.rougharea) contact me if its yours! ";
+        $a->place_id = 2;
         //$a->item_id = 2;
 
         $b = new Post();
@@ -31,7 +32,7 @@ class PostTableSeeder extends Seeder
         $b->date_found_lost = '2021/11/10';
         $b->content = "Found this (item.name) at (place.rougharea) contact me if its yours! ";
         //hard coded
-       // $a->place_id = 1;
+        $a->place_id = 1;
        // $b->item_id = 1;
         $b->save();
 

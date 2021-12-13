@@ -22,11 +22,11 @@ class CreatePostsTable extends Migration
             $table->date('date_found_lost')->nullable();
             $table->string('content');
            
-            //$table->bigInteger('place_id')->unsigned();
+            $table->bigInteger('place_id')->unsigned();
             //add item and place when relationships done
             
-            // $table->foreign('place_id')->references('id')->on('places')
-            // ->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('place_id')->references('id')->on('places')
+             ->onDelete('cascade')->onUpdate('cascade');
             
             // $table->foreign('item_id')->references('id')->on('items')
             //  ->onDelete('cascade')->onUpdate('cascade');
