@@ -24,6 +24,6 @@ class PlaceTableSeeder extends Seeder
         $b->specific_area = "wind street";
         $b->save();
 
-        //$places = Place::factory()->count(8)->create();
+        $places = Place::factory()->count(8)->create();
     }
 }

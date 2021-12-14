@@ -43,6 +43,7 @@ class PostController extends Controller
             'date_found_lost'=>'nullable|date',
             'content'=>'required|max:255',
             'place_id'=>'required|integer',
+            'item_id'=>'required|integer',
         ]);
         $a = new Post;
         $a->name = $validatedData['name'];
@@ -51,6 +52,7 @@ class PostController extends Controller
         $a->date_found_lost = $validatedData['date_found_lost'];
         $a->content = $validatedData['content'];
         $a->place_id= $validatedData['place_id'];
+        $a->item_id= $validatedData['place_id'];
         $a->save();
 
         session()->flash('message', 'Post was created.');

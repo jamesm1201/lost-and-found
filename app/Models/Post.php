@@ -11,7 +11,7 @@ class Post extends Model
 
     //after swapping relations check models
     public function item(){
-        return $this->hasOne(Item::class);
+        return $this->belongsTo(Item::class);
     }
     public function comment(){
         return $this->hasMany(Comment::class);

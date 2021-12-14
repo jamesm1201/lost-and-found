@@ -19,11 +19,8 @@ class CreateItemsTable extends Migration
             $table->string('lost_found');
             $table->boolean('handed_in')->nullable();
             $table->boolean('valuable')->nullable();
-            $table->bigInteger('post_id')->unsigned();
+            
             $table->timestamps();
-
-            $table->foreign('post_id')->references('id')->on('posts')
-             -> onDelete('cascade')->onUpdate('cascade');
         });
     }
 

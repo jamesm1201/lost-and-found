@@ -15,7 +15,10 @@
         value={{old('date_found_lost') }}></p>
         <p>Content: <input type="text" name="content"
         value={{old('content') }}></p>
-        <p>Place id: <input type="text" name="place_id"
+        
+        <p>Place id: <input type="number" name="place_id"
+        value={{old('place_id') }}></p>
+        <p>Place id: <input type="number" name="place_id"
         value={{old('place_id') }}></p>
         <input type="submit" value="Submit">
         <a href="{{route('posts.index')}}">Cancel</a>

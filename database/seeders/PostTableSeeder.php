@@ -22,8 +22,9 @@ class PostTableSeeder extends Seeder
         $a->date_found_lost = '2021/11/10';
         $a->content = "Found this (item.name) at (place.rougharea) contact me if its yours! ";
         $a->place_id = 2;
+        $a->item_id = 2;
         $a->save();
-        //$a->item_id = 2;
+       
 
         $b = new Post();
         $b->name = "James";
@@ -34,9 +35,9 @@ class PostTableSeeder extends Seeder
         $b->content = "Found this (item.name) at (place.rougharea) contact me if its yours! ";
         //hard coded
         $b->place_id = 1;
-       // $b->item_id = 1;
+        $b->item_id = 1;
         $b->save();
 
-        $posts = Post::factory()->count(10)->create();
+        $posts = Post::factory()->count(8)->create();
     }
 }

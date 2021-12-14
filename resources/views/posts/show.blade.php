@@ -12,6 +12,7 @@
         <li>Contact number: {{$post->contact_number ?? 'N/A'}}</li>
         <li>Date: {{$post->date_found_lost ?? 'N/A'}}</li>
         <li> {{$post->content}}</li>
+        <li>Place: {{$post->place->name ?? ''}}</li>
         <li>Item: {{$post->item->name ?? ''}}</li>
     </ul>
 @endsection
