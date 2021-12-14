@@ -51,6 +51,10 @@ class PostController extends Controller
         $a->date_found_lost = $validatedData['date_found_lost'];
         $a->content = $validatedData['content'];
         $a->place_id= $validatedData['place_id'];
+        $a->save();
+
+        session()->flash('message', 'Post was created.');
+        return redirect()->route('posts.index');
     
     }
 
