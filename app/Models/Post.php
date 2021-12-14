@@ -17,7 +17,7 @@ class Post extends Model
         return $this->hasMany(Comment::class);
     }
     public function place(){
-        return $this->hasOne(Place::class);
+        return $this->belongsTo(Place::class);
     }
 
 }

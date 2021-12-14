@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Place extends Model
 {
     use HasFactory;
-    public function post(){
+    //pluralised function
+    public function posts(){
         return $this->hasMany(Post::class);
     }
 }
