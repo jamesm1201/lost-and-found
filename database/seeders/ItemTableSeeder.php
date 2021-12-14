@@ -22,6 +22,6 @@ class ItemTableSeeder extends Seeder
         $b->post_id = 1;
         $b->save();
 
-        $items = Item::factory()->count(3)->create();
+        $items = Item::factory()->count(10)->create();
     }
 }

@@ -27,16 +27,7 @@ class CreatePostsTable extends Migration
             
             $table->foreign('place_id')->references('id')->on('places')
              ->onDelete('cascade')->onUpdate('cascade');
-            
-            // $table->foreign('item_id')->references('id')->on('items')
-            //  ->onDelete('cascade')->onUpdate('cascade');
         });
-        // Schema::table('posts', function(Blueprint $table){
-        //     $table->bigInteger('item_id')->unsigned();
-        //     $table->foreign('item_id')
-        //          ->references('id')
-        //          ->on('items');
-        // });
     }
 
     /**

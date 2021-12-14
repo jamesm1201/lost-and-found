@@ -18,10 +18,8 @@ class ItemFactory extends Factory
             
             'name'=>$this->faker->randomElement(['phone', 'wallet', 'keys', 'bag', 'toy']),
             'lost_found'=>$this->faker->randomElement(['lost', 'found']),
-            'post_id'=>1,
-            // 'post_id' => function(){
-            //     return factory(\App\Models\Post::class)->create()->id;
-            // },
+            'post_id'=> $this->$faker->unique()->numberBetween(2, App\Post::count()),
+            
             //'handed_in'=>$this->faker->randomElement(['true', 'false']),
             //'valuable'=>$this->faker->randomElement(['true', 'false']),
         ];
