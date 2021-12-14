@@ -44,6 +44,14 @@ class PostController extends Controller
             'content'=>'required|max:255',
             'place_id'=>'required|integer',
         ]);
+        $a = new Post;
+        $a->name = $validatedData['name'];
+        $a->email = $validatedData['email'];
+        $a->contact_number = $validatedData['contact_number'];
+        $a->date_found_lost = $validatedData['date_found_lost'];
+        $a->content = $validatedData['content'];
+        $a->place_id= $validatedData['place_id'];
+    
     }
 
     /**
