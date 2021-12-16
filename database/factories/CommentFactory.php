@@ -16,10 +16,10 @@ class CommentFactory extends Factory
     {
         return [
             'name'=>$this->faker->firstName(),
-            'contact_number'=>$this->faker->str_random(12)->numerify('############'),
+            'contact_number'=>$this->faker->numerify('############'),
             'email'=>$this->faker->unique()->email(),
-            'content'=>$this->faker->str_random(40),
-            'post_id'=>1,
+            'content'=>$this->faker->lexify('This is mine ?????? ?????? ??'),
+            'post_id'=> $this->faker->randomElement(['2','4','5','6','7','8','9']),
             
         ];
     }

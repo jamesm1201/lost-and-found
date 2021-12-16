@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PlaceController;
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,11 +30,17 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
-Route::get('posts/create', [Postcontroller::class, 'create'])->name('posts.create');
-Route::post('posts', [Postcontroller::class, 'store'])->name('posts.store');
+Route::get('posts/create', [PostController::class, 'create'])->name('posts.create');
+Route::post('posts', [PostController::class, 'store'])->name('posts.store');
 Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
 
 Route::get('/places', [PlaceController::class, 'index'])->name('places.index');
 Route::get('/places/{id}', [PlaceController::class, 'show'])->name('places.show');
+
+Route::get('/comments/{id}', [CommentController::class, 'index'])->name('comments.index');
+// Route::get('/comments/{id}', function($id ?? ''){
+//     return view('');
+// });
+Route::get('comments/create', [CommentController::class, 'create'])->name('comments.create');
 
 require __DIR__.'/auth.php';
