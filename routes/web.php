@@ -38,6 +38,7 @@ Route::get('/places', [PlaceController::class, 'index'])->name('places.index');
 Route::get('/places/{id}', [PlaceController::class, 'show'])->name('places.show');
 
 Route::get('/comments', [CommentController::class, 'index'])->name('comments.index');
+Route::get('/comments/{id}', [CommentController::class, 'show'])->name('comments.show');
 // Route::get('/comments/{id}', function($id ?? ''){
 //     return view('');
 // });

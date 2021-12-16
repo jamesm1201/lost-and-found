@@ -13,9 +13,8 @@
         value={{old('contact_number') }}></p>
         <p>Message: <input type="text" name="content"
         value={{old('content') }}></p>
-        <p>Post id: <input type="number" name="post_id"
+        <p>Post Number: <input type="number" name="post_id"
         value={{old('post_id') }}></p>
-        
         
         <input type="submit" value="Submit">
         <a href="{{route('comments.index')}}">Cancel</a>

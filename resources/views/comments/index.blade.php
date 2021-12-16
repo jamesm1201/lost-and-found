@@ -19,4 +19,5 @@
         
     </ul>
     <a href="{{route('comments.create')}}">Create Comment</a>
+    <a href="{{route('posts.index')}}">Back</a>
 @endsection

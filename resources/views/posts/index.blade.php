@@ -13,4 +13,5 @@
         @endforeach
     </ul>
     <a href="{{route('posts.create')}}">Create Post</a>
+    <a href="{{route('comments.index', ['id'=>$post->id])}}"> All Comments</a>
 @endsection
