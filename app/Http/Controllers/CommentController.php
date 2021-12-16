@@ -43,7 +43,7 @@ class CommentController extends Controller
             'email'=>'required|max:255',
             'contact_number'=>'nullable|max:20',
             'content'=>'required|max:255',
-            //'place_id'=>'required|integer',
+            'post_id'=>'required|integer',
             
         ]);
         $a = new Comment;
@@ -51,7 +51,7 @@ class CommentController extends Controller
         $a->email = $validatedData['email'];
         $a->contact_number = $validatedData['contact_number'];
         $a->content = $validatedData['content'];
-        // post id ??$a->place_id= $validatedData['place_id'];
+        $a->post_id= $validatedData['post_id'];
 
         $a->save();
 

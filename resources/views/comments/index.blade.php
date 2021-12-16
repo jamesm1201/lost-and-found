@@ -12,7 +12,9 @@
         <li> {{$comment->name}}</li>
         <li> {{$comment->contact_number}}</li>
         <li> {{$comment->email}}</li>
-        <li> {{$comment->content}}</li>     
+        <li> {{$comment->content}}</li>    
+        <li> Post Number: {{$comment->post_id}}</li> 
+        <li> <a href="{{route('posts.show', ['id'=>$comment->post_id])}}">Go to corresponding post: {{$comment->post_id}}</a></li>  
         @endforeach
         
     </ul>
