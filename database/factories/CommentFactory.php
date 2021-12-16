@@ -19,7 +19,7 @@ class CommentFactory extends Factory
             'contact_number'=>$this->faker->numerify('############'),
             'email'=>$this->faker->unique()->email(),
             'content'=>$this->faker->lexify('This is mine ?????? ?????? ??'),
-            'post_id'=> $this->faker->randomElement(['2','4','5','6','7','8','9']),
+            'post_id'=> $this->faker->randomElement(['2','4','5','6','7','8']),
             
         ];
     }

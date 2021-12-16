@@ -9,7 +9,7 @@
     <title> Posts - @yield('title')</title>
 </head>
 <body>
-    <h1>@yield('title')</h1>
+    <h1 class= "title">@yield('title')</h1>
 
     @if (session('message'))
         <p><b>{{session('message')}}</b></p>
@@ -26,7 +26,7 @@
         </div>
     @endif
 
-    <div>
+    <div class = "body">
         @yield('content')
     </div>
 </body>

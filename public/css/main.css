@@ -6,7 +6,24 @@
 }
 
 body {
-    background: #F2F2F2;
+    background: #83c7ccec;
     font-family: 'Lato';
+}
+
+.title{
+    color: rgb(39, 60, 247);
+    text-align: center;
+    text-shadow: 4em;
+    font-size: 50px;
+
+}
+
+.body {
+    color : rgb(65, 80, 216);
+    text-align: center;
+    text-shadow: 1em;
+    word-spacing: .5em;
+    font-size: 25px;
+
 }
 

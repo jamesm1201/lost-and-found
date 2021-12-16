@@ -14,7 +14,7 @@
         <li> {{$post->content}}</li>
         <li>Place: {{$post->place->rough_area ?? ''}}</li>
         <li>Item: {{$post->item->name ?? ''}}</li>
-        <a href="{{route('comments.show', ['id'=>$post->id] )}}"> This post's comments</a>
+        <li><a href="{{route('comments.show', ['id'=>$post->id] )}}"> This post's comments</a></li>
         <a href="{{route('comments.create')}}">Create Comment</a>
     </ul>
 @endsection
