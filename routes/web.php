@@ -37,10 +37,11 @@ Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
 Route::get('/places', [PlaceController::class, 'index'])->name('places.index');
 Route::get('/places/{id}', [PlaceController::class, 'show'])->name('places.show');
 
-Route::get('/comments/{id}', [CommentController::class, 'index'])->name('comments.index');
+Route::get('/comments', [CommentController::class, 'index'])->name('comments.index');
 // Route::get('/comments/{id}', function($id ?? ''){
 //     return view('');
 // });
 Route::get('comments/create', [CommentController::class, 'create'])->name('comments.create');
+Route::post('comments', [CommentController::class, 'store'])->name('comments.store');
 
 require __DIR__.'/auth.php';

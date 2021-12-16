@@ -15,5 +15,6 @@
         <li>Place: {{$post->place->rough_area ?? ''}}</li>
         <li>Item: {{$post->item->name ?? ''}}</li>
         <li> <a href="{{route('comments.index', ['id'=>$post->id])}}"> Comments</a></li>
+        <a href="{{route('comments.create')}}">Create Comment</a>
     </ul>
 @endsection

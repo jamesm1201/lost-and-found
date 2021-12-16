@@ -12,11 +12,12 @@ class CommentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    public function index()
     {
-        $comments = Comment::where('post_id', '==', $id);
-        dd($comments);
-        return view('comments.index', ['comments'=>$comments]);
+        //where doesn't seem to be working
+        $comment = Comment::all();
+        //dd($comments);
+        return view('comments.index', ['comments'=>$comment]);
     }
 
     /**
@@ -26,7 +27,7 @@ class CommentController extends Controller
      */
     public function create()
     {
-        //
+        return view('comments.create');
     }
 
     /**
@@ -37,7 +38,25 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name'=>'required|max:255',
+            'email'=>'required|max:255',
+            'contact_number'=>'nullable|max:20',
+            'content'=>'required|max:255',
+            //'place_id'=>'required|integer',
+            
+        ]);
+        $a = new Comment;
+        $a->name = $validatedData['name'];
+        $a->email = $validatedData['email'];
+        $a->contact_number = $validatedData['contact_number'];
+        $a->content = $validatedData['content'];
+        // post id ??$a->place_id= $validatedData['place_id'];
+
+        $a->save();
+
+        session()->flash('message', 'Comment was created.');
+        return redirect()->route('posts.index');
     }
 
     /**
