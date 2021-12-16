@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\PlaceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,5 +32,8 @@ Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
 Route::get('posts/create', [Postcontroller::class, 'create'])->name('posts.create');
 Route::post('posts', [Postcontroller::class, 'store'])->name('posts.store');
 Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
+
+Route::get('/places', [PlaceController::class, 'index'])->name('places.index');
+Route::get('/places/{id}', [PlaceController::class, 'show'])->name('places.show');
 
 require __DIR__.'/auth.php';
