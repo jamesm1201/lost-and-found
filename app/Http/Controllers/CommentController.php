@@ -68,6 +68,7 @@ class CommentController extends Controller
      */
     public function show($id)
     {
+        //$comment = Comment::findAll()->where('post_id', '=', '$id');
         $comment = Comment::findOrFail($id);
         return view('comments.show', ['comment'=>$comment]);
     }
